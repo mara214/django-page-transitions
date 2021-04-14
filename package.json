@@ -7,6 +7,14 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "ping www.google.com"
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.36.2",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
