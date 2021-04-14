@@ -1,0 +1,19 @@
+FROM node:12-buster
+
+WORKDIR '/project'
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        fonttools \
+        fontforge \
+        ttfautohint
+
+COPY package.json .
+
+RUN npm install --quiet \
+    && rm -rf /root/.npm/ \
+    && rm -rf /root/.node-gyp/
+
+COPY . .
+
+CMD ["npm", "run", "dev"]

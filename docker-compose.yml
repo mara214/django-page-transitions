@@ -1,0 +1,32 @@
+version: '3'
+services:
+  db:
+    image: postgres:9.6
+    restart: unless-stopped
+    environment:
+      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data/pgdata
+  django:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.django
+    ports:
+      - 127.0.0.1:8000:8000
+    volumes:
+      - '/project/node_modules'
+      - '.:/project'
+    depends_on:
+      - db
+  client:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.client
+    volumes:
+      - '/project/node_modules'
+      - '.:/project'
+
+volumes:
+  pgdata:
+    driver: local
