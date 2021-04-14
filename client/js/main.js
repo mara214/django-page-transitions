@@ -1,1 +1,3 @@
-console.log("foo")
+import { startup } from './hooks';
+
+startup();
