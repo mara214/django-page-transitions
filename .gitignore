@@ -1,0 +1,17 @@
+# Python / Django
+pip-log.txt
+*.py[co]
+__pycache__
+.cache
+.pytest_cache
+*.so
+*.egg-info
+htmlcov/
+.coverage
+coverage.xml
+*.mo
+src/site/settings.py
+
+/web/
+/dumps/
+/build/
