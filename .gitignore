@@ -18,3 +18,4 @@ src/site/settings.py
 
 # Build
 /static/js
+/static/css
