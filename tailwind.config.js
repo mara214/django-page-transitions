@@ -1,11 +1,10 @@
 module.exports = {
-	purge: {
-		enabled: true,
-		content: ['./templates/**/*.html'],
-	},
+	// purge: ['./templates/**/*.html'],
 	theme: {
 		extend: {}
 	},
 	variants: {},
-	plugins: []
+	plugins: [
+		require('@tailwindcss/typography'),
+	]
 };
