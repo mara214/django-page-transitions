@@ -1,0 +1,12 @@
+{
+  "name": "django-page-transitions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:schulke-214/django-page-transitions",
+  "author": "Maximilian Schulke <hello@maximilianschulke.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "ping www.google.com"
+  }
+}
